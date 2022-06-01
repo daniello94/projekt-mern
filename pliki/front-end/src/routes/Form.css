@@ -1,0 +1,46 @@
+form {
+    margin: 20px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: blanchedalmond;
+}
+
+input, select {
+    width: 50%;
+    height: 30px;
+    margin: 5px;
+    transition: 0.7s;
+}
+
+select:focus {
+    background-color: bisque;
+    cursor: pointer;
+}
+
+input:focus {
+    background-color: bisque;
+
+}
+
+form button {
+    background: black;
+    color: white;
+    padding: 5px;
+    transition: .7s;
+    margin-bottom: 5px;
+}
+
+form button:hover {
+    color: black;
+    background-color: cornsilk;
+}
+
+form p {
+    position: absolute;
+    color: red;
+    font-size: 15px;
+}
+
+form p span {
+    color: green;
+}
