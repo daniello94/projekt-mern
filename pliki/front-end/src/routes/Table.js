@@ -3,7 +3,7 @@ import './Table.css';
 import axios from "axios";
 function Table(props) {
     function delateStudent(_id) {
-        alert("Napewno chcesz zrezygnować?")
+        alert("Uczestnik został usuniety z listy ")
         if(alert !== true){
             axios.delete('http://127.0.0.1:8080/api/student/delete/' + _id)
             .then(() => {
