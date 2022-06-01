@@ -3,10 +3,14 @@ import './Table.css';
 import axios from "axios";
 function Table(props) {
     function delateStudent(_id) {
-        axios.delete('http://127.0.0.1:8080/api/student/delete/' + _id)
+        alert("Napewno chcesz zrezygnować?")
+        if(alert !== true){
+            axios.delete('http://127.0.0.1:8080/api/student/delete/' + _id)
             .then(() => {
                 props.dataStudent();
             });
+        }
+       
     };
     const [editStudent, setEditStudent] = useState("");
     const [name, setName] = useState("");
@@ -25,6 +29,7 @@ function Table(props) {
     };
     let arrayStudent = props.arrayStudent;
     let liElements = arrayStudent.map((user) => {
+
         const { name, username, city, course } = editStudent;
         if (editStudent === user._id) {
             return (
